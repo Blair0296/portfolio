@@ -19,11 +19,15 @@
             color: #333;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             text-align: center;
-            padding: 24px 16px;
+            padding: 32px 16px 24px;
             background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
         h1 {
@@ -32,209 +36,185 @@
             color: #111;
         }
 
+
         /* =========================
-           PDF 区域
+           PDF Button
         ========================= */
 
-        .pdf-container {
-            width: 96%;
-            max-width: 1200px;
-            margin: 24px auto;
-            height: calc(100vh - 150px);
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        .portfolio-section {
+            width: 92%;
+            max-width: 760px;
+            margin: 48px auto 0;
+            text-align: center;
         }
 
-        iframe {
+        .portfolio-button {
+            display: block;
             width: 100%;
-            height: 100%;
-            border: none;
+            padding: 20px 24px;
+
+            background: #111;
+            color: #fff;
+
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
-        .mobile-view-button {
-            display: none;
+        .portfolio-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
         }
+
 
         /* =========================
-           产品动画区域
+           Product Animation
         ========================= */
 
         .animation-section {
-            width: 96%;
-            max-width: 1200px;
-            margin: 40px auto 60px;
+            width: 92%;
+            max-width: 760px;
+            margin: 56px auto 70px;
         }
 
         .section-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: #111;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .animation-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+        .animation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .animation-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            padding: 16px 20px;
+
             background: #ffffff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            text-decoration: none;
             color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .animation-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .animation-cover {
-            aspect-ratio: 16 / 9;
-            background: #eeeeee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 42px;
-            color: #555;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 16px rgba(0, 0, 0, 0.10);
         }
 
         .animation-info {
-            padding: 18px 20px 20px;
+            text-align: left;
         }
 
         .animation-name {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 500;
             color: #111;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .animation-description {
-            font-size: 13px;
-            color: #777;
+            font-size: 12px;
+            color: #888;
             line-height: 1.5;
         }
 
         .watch-text {
-            display: inline-block;
-            margin-top: 14px;
-            font-size: 14px;
-            color: #111;
-            font-weight: 500;
+            flex-shrink: 0;
+            margin-left: 20px;
+
+            font-size: 13px;
+            color: #555;
+            white-space: nowrap;
         }
 
+
         /* =========================
-           手机端
+           Mobile
         ========================= */
 
         @media (max-width: 768px) {
 
             header {
-                padding: 20px 16px;
+                padding: 24px 16px 20px;
             }
 
             h1 {
                 font-size: 20px;
             }
 
-            /* 手机端隐藏 PDF iframe */
-            .pdf-container {
-                width: 100%;
-                height: auto;
-                min-height: 0;
-                margin: 0 auto;
-                padding: 40px 20px;
-                background: #f5f5f5;
-                border-radius: 0;
-                box-shadow: none;
-                overflow: visible;
+            .portfolio-section {
+                width: 90%;
+                margin-top: 36px;
             }
 
-            iframe {
-                display: none;
-            }
-
-            /* 手机端 PDF 按钮 */
-            .mobile-view-button {
-                display: block;
-                width: 100%;
-                max-width: 360px;
-                margin: 20px auto;
-                padding: 16px 20px;
-
-                background-color: #111;
-                color: #ffffff;
-
-                text-align: center;
-                text-decoration: none;
-
+            .portfolio-button {
+                padding: 17px 20px;
                 font-size: 16px;
-                font-weight: 500;
-
-                border-radius: 8px;
-
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             }
 
-            .hint {
-                display: block;
-                max-width: 360px;
-                margin: 16px auto 0;
-
-                text-align: center;
-
-                color: #777;
-                font-size: 13px;
-                line-height: 1.6;
-            }
-
-            /* 手机端动画 */
             .animation-section {
-                width: 92%;
-                margin: 10px auto 50px;
+                width: 90%;
+                margin-top: 44px;
+                margin-bottom: 50px;
             }
 
             .section-title {
-                font-size: 18px;
-                margin-bottom: 16px;
-            }
-
-            .animation-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
+                font-size: 17px;
+                margin-bottom: 12px;
             }
 
             .animation-card {
-                border-radius: 10px;
-            }
-
-            .animation-info {
-                padding: 16px;
+                padding: 14px 16px;
             }
 
             .animation-name {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .animation-description {
-                font-size: 13px;
+                font-size: 12px;
+            }
+
+            .watch-text {
+                font-size: 12px;
+                margin-left: 12px;
             }
         }
 
     </style>
 </head>
 
+
 <body>
 
+
     <!-- =========================
-         页面标题
+         Header
     ========================= -->
 
     <header>
@@ -243,54 +223,44 @@
 
 
     <!-- =========================
-         PDF 作品集
+         Portfolio PDF
     ========================= -->
 
-    <div class="pdf-container">
+    <section class="portfolio-section">
 
-        <!-- 电脑端：直接显示 PDF -->
-        <iframe
-            src="zy_portfolio.pdf"
-            title="ZY 工业设计作品集">
-        </iframe>
-
-        <!-- 手机端：直接打开 PDF -->
         <a
-            class="mobile-view-button"
+            class="portfolio-button"
             href="zy_portfolio.pdf"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
+
             打开作品集 PDF
+
         </a>
 
-        <span class="hint">
-            点击按钮后将在新页面打开完整作品集
-        </span>
-
-    </div>
+    </section>
 
 
     <!-- =========================
-         产品动画
+         Product Animation
     ========================= -->
 
     <section class="animation-section">
 
-        <h2 class="section-title">Product Animation</h2>
+        <h2 class="section-title">
+            Product Animation
+        </h2>
 
-        <div class="animation-grid">
+        <div class="animation-list">
 
 
-            <!-- 动画 01 -->
+            <!-- Animation 01 -->
 
             <a
                 class="animation-card"
                 href="https://www.bilibili.com/video/BV1cf7w6pEAz/"
                 target="_blank"
                 rel="noopener noreferrer">
-
-                <div class="animation-cover">
-                    ▶
-                </div>
 
                 <div class="animation-info">
 
@@ -302,26 +272,22 @@
                         整合创新课程 · 产品动画
                     </div>
 
-                    <span class="watch-text">
-                        查看动画 →
-                    </span>
-
                 </div>
+
+                <span class="watch-text">
+                    查看动画 →
+                </span>
 
             </a>
 
 
-            <!-- 动画 02 -->
+            <!-- Animation 02 -->
 
             <a
                 class="animation-card"
                 href="https://www.bilibili.com/video/BV1a9cpzBErZ/"
                 target="_blank"
                 rel="noopener noreferrer">
-
-                <div class="animation-cover">
-                    ▶
-                </div>
 
                 <div class="animation-info">
 
@@ -333,11 +299,11 @@
                         产品动画
                     </div>
 
-                    <span class="watch-text">
-                        查看动画 →
-                    </span>
-
                 </div>
+
+                <span class="watch-text">
+                    查看动画 →
+                </span>
 
             </a>
 
@@ -345,6 +311,7 @@
         </div>
 
     </section>
+
 
 </body>
 </html>
