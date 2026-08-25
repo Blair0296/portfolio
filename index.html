@@ -1,31 +1,38 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ZY 工业设计作品集</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: #f5f5f5;
             color: #333;
         }
+
         header {
             text-align: center;
             padding: 24px 16px;
             background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
+
         h1 {
             font-size: 24px;
             font-weight: 600;
             color: #111;
         }
+
         .pdf-container {
             width: 96%;
             max-width: 1200px;
@@ -34,36 +41,126 @@
             background: #ffffff;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
+
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
+        /* 手机端按钮默认隐藏 */
+        .mobile-view-button {
+            display: none;
+        }
+
+        /* 手机端 */
         @media (max-width: 768px) {
+
             header {
-                padding: 16px;
+                padding: 20px 16px;
             }
+
             h1 {
-                font-size: 18px;
+                font-size: 20px;
             }
+
             .pdf-container {
                 width: 100%;
-                margin: 12px auto;
-                height: calc(100vh - 120px);
+                height: auto;
+                min-height: 0;
+                margin: 0 auto;
+                padding: 40px 20px;
+                background: #f5f5f5;
                 border-radius: 0;
+                box-shadow: none;
+                overflow: visible;
+            }
+
+            /* 手机端隐藏 iframe */
+            iframe {
+                display: none;
+            }
+
+            /* 显示 PDF 打开按钮 */
+            .mobile-view-button {
+                display: block;
+                width: 100%;
+                max-width: 360px;
+                margin: 20px auto;
+                padding: 16px 20px;
+
+                background-color: #111;
+                color: #ffffff;
+
+                text-align: center;
+                text-decoration: none;
+
+                font-size: 16px;
+                font-weight: 500;
+
+                border-radius: 8px;
+
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+                transition: opacity 0.2s ease;
+            }
+
+            .mobile-view-button:active {
+                opacity: 0.7;
+            }
+
+            .hint {
+                display: block;
+                max-width: 360px;
+                margin: 16px auto 0;
+
+                text-align: center;
+
+                color: #777;
+                font-size: 13px;
+                line-height: 1.6;
             }
         }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1>ZY 工业设计作品集</h1>
     </header>
+
     <div class="pdf-container">
-        <!-- 这里的文件名已经和你的 PDF 完全对应 -->
-        <iframe src="zy_portfolio.pdf" width="100%" height="100%" frameborder="0"></iframe>
+
+        <!--
+            电脑端：
+            直接在网页中显示 PDF
+        -->
+        <iframe
+            src="zy_portfolio.pdf"
+            title="ZY 工业设计作品集">
+        </iframe>
+
+
+        <!--
+            手机端：
+            点击按钮直接打开 PDF 文件
+        -->
+        <a
+            class="mobile-view-button"
+            href="zy_portfolio.pdf"
+            target="_blank">
+            打开作品集 PDF
+        </a>
+
+        <span class="hint">
+            点击按钮后将在新页面打开完整作品集
+        </span>
+
     </div>
+
 </body>
 </html>
+```
