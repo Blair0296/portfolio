@@ -52,6 +52,10 @@ function setupHorizontalMarquee(row, speed) {
   let dragStartOffset = 0;
 
   originals.forEach((image) => {
+    if (window.loadDeferredImage) {
+      window.loadDeferredImage(image);
+    }
+
     const bounds = image.getBoundingClientRect();
     image.style.width = `${bounds.width / getDesktopScale()}px`;
     image.style.height = `${bounds.height / getDesktopScale()}px`;
@@ -149,8 +153,26 @@ function setupHorizontalMarquee(row, speed) {
   requestAnimationFrame(animate);
 }
 
-const drawingRow = document.querySelector(".drawing-row");
-const likesRow = document.querySelector(".likes-row");
+function setupWhenNearViewport(row, speed) {
+  if (!row) return;
 
-if (drawingRow) setupHorizontalMarquee(drawingRow, 24);
-if (likesRow) setupHorizontalMarquee(likesRow, 18);
+  if (!("IntersectionObserver" in window)) {
+    setupHorizontalMarquee(row, speed);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+
+      observer.disconnect();
+      setupHorizontalMarquee(row, speed);
+    },
+    { rootMargin: "600px 0px" },
+  );
+
+  observer.observe(row);
+}
+
+setupWhenNearViewport(document.querySelector(".drawing-row"), 24);
+setupWhenNearViewport(document.querySelector(".likes-row"), 18);

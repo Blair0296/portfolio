@@ -11,7 +11,7 @@ html,
 body {
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   background: #fff;
   color: var(--black);
   font-family: "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
