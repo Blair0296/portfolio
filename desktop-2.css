@@ -1,0 +1,207 @@
+:root {
+  --black: #000;
+  --gray: #d9d9d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--black);
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+}
+
+body {
+  --desktop-scale: max(1, calc(100vw / 1440px));
+  min-height: calc(34091px * var(--desktop-scale));
+}
+
+.desktop-2-frame {
+  position: relative;
+  width: 1440px;
+  height: 34091px;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  transform: scale(var(--desktop-scale));
+  transform-origin: top left;
+}
+
+.figma-frame {
+  position: absolute;
+  left: 0;
+  display: block;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 72px;
+  overflow: hidden;
+  transform: scale(var(--desktop-scale));
+  transform-origin: top left;
+}
+
+.navigation-background {
+  position: absolute;
+  left: -133px;
+  top: 0;
+  width: 1726px;
+  height: 72px;
+  background: var(--gray);
+}
+
+.navigation-name {
+  position: absolute;
+  left: 103px;
+  top: 17px;
+  width: 142px;
+  height: 37px;
+}
+
+.navigation-name img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+}
+
+.navigation-name span {
+  position: absolute;
+  left: 56px;
+  top: 9px;
+  width: 86px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.navigation-buttons {
+  position: absolute;
+  left: 730px;
+  top: 26px;
+  display: flex;
+  gap: 108px;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.navigation-buttons span:nth-child(1),
+.navigation-buttons span:nth-child(2) {
+  width: 59px;
+}
+
+.navigation-buttons span:nth-child(3) {
+  width: 63px;
+}
+
+.navigation-buttons span:nth-child(4) {
+  width: 83px;
+}
+
+@media (max-width: 1439px) {
+  body {
+    --desktop-scale: 1;
+    min-height: 0;
+  }
+
+  .desktop-2-frame {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 64px;
+    overflow: visible;
+    transform: none;
+  }
+
+  .figma-frame {
+    position: relative;
+    left: auto;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .navigation {
+    width: 100%;
+    height: 64px;
+    transform: none;
+  }
+
+  .navigation-background {
+    left: 0;
+    width: 100%;
+    height: 64px;
+  }
+
+  .navigation-name {
+    left: clamp(20px, 6vw, 56px);
+    top: 14px;
+  }
+
+  .navigation-buttons {
+    left: auto;
+    right: clamp(20px, 6vw, 56px);
+    top: 23px;
+    gap: clamp(24px, 6vw, 72px);
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 0;
+  }
+
+  .desktop-2-frame {
+    margin-top: 104px;
+  }
+
+  .navigation {
+    height: 104px;
+  }
+
+  .navigation-background {
+    height: 104px;
+  }
+
+  .navigation-name {
+    left: 20px;
+    top: 14px;
+  }
+
+  .navigation-buttons {
+    left: 20px;
+    right: 20px;
+    top: 66px;
+    gap: 0;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .navigation-buttons span:nth-child(1),
+  .navigation-buttons span:nth-child(2),
+  .navigation-buttons span:nth-child(3),
+  .navigation-buttons span:nth-child(4) {
+    width: auto;
+  }
+}

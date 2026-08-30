@@ -1,317 +1,151 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ZY 工业设计作品集</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        /* =========================
-           Header
-        ========================= */
-
-        header {
-            text-align: center;
-            padding: 32px 16px 24px;
-            background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #111;
-        }
-
-
-        /* =========================
-           PDF Button
-        ========================= */
-
-        .portfolio-section {
-            width: 92%;
-            max-width: 760px;
-            margin: 48px auto 0;
-            text-align: center;
-        }
-
-        .portfolio-button {
-            display: block;
-            width: 100%;
-            padding: 20px 24px;
-
-            background: #111;
-            color: #fff;
-
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: 500;
-
-            border-radius: 10px;
-
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-
-            transition:
-                transform 0.2s ease,
-                opacity 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .portfolio-button:hover {
-            transform: translateY(-2px);
-            opacity: 0.95;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-        }
-
-
-        /* =========================
-           Product Animation
-        ========================= */
-
-        .animation-section {
-            width: 92%;
-            max-width: 760px;
-            margin: 56px auto 70px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 16px;
-        }
-
-        .animation-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .animation-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            width: 100%;
-            padding: 16px 20px;
-
-            background: #ffffff;
-            color: inherit;
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .animation-card:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 16px rgba(0, 0, 0, 0.10);
-        }
-
-        .animation-info {
-            text-align: left;
-        }
-
-        .animation-name {
-            font-size: 15px;
-            font-weight: 500;
-            color: #111;
-            margin-bottom: 4px;
-        }
-
-        .animation-description {
-            font-size: 12px;
-            color: #888;
-            line-height: 1.5;
-        }
-
-        .watch-text {
-            flex-shrink: 0;
-            margin-left: 20px;
-
-            font-size: 13px;
-            color: #555;
-            white-space: nowrap;
-        }
-
-
-        /* =========================
-           Mobile
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            header {
-                padding: 24px 16px 20px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            .portfolio-section {
-                width: 90%;
-                margin-top: 36px;
-            }
-
-            .portfolio-button {
-                padding: 17px 20px;
-                font-size: 16px;
-            }
-
-            .animation-section {
-                width: 90%;
-                margin-top: 44px;
-                margin-bottom: 50px;
-            }
-
-            .section-title {
-                font-size: 17px;
-                margin-bottom: 12px;
-            }
-
-            .animation-card {
-                padding: 14px 16px;
-            }
-
-            .animation-name {
-                font-size: 14px;
-            }
-
-            .animation-description {
-                font-size: 12px;
-            }
-
-            .watch-text {
-                font-size: 12px;
-                margin-left: 12px;
-            }
-        }
-
-    </style>
-</head>
-
-
-<body>
-
-
-    <!-- =========================
-         Header
-    ========================= -->
-
-    <header>
-        <h1>ZY 工业设计作品集</h1>
-    </header>
-
-
-    <!-- =========================
-         Portfolio PDF
-    ========================= -->
-
-    <section class="portfolio-section">
-
-        <a
-            class="portfolio-button"
-            href="viewer.html"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            打开作品集 PDF
-
-        </a>
-
-    </section>
-
-
-    <!-- =========================
-         Product Animation
-    ========================= -->
-
-    <section class="animation-section">
-
-        <h2 class="section-title">
-            Product Animation
-        </h2>
-
-        <div class="animation-list">
-
-
-            <!-- Animation 01 -->
-
-            <a
-                class="animation-card"
-                href="https://www.bilibili.com/video/BV1cf7w6pEAz/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <div class="animation-info">
-
-                    <div class="animation-name">
-                        长者体检辅助设备
-                    </div>
-
-                    <div class="animation-description">
-                        整合创新课程 · 产品动画
-                    </div>
-
-                </div>
-
-                <span class="watch-text">
-                    查看动画 →
-                </span>
-
-            </a>
-
-
-            <!-- Animation 02 -->
-
-            <a
-                class="animation-card"
-                href="https://www.bilibili.com/video/BV1a9cpzBErZ/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <div class="animation-info">
-
-                    <div class="animation-name">
-                        柜内净化器
-                    </div>
-
-                    <div class="animation-description">
-                        产品动画
-                    </div>
-
-                </div>
-
-                <span class="watch-text">
-                    查看动画 →
-                </span>
-
-            </a>
-
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blair Zhang Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="navigation" data-name="navigation">
+      <div class="navigation-background"></div>
+      <div class="navigation-name" data-name="navigation_name">
+        <img src="./assets/figma-images/Desktop%20-%201/navigation_name_icon.png" alt="" />
+        <span># B145T0</span>
+      </div>
+      <div class="navigation-buttons" data-name="navigation_buttons">
+        <span role="button" tabindex="0" data-scroll-target="hero">HOME</span>
+        <span role="button" tabindex="0" data-scroll-target="about">ABOUT</span>
+        <span role="button" tabindex="0" data-scroll-target="works">WORKS</span>
+        <span role="button" tabindex="0" data-scroll-target="contact">CONTACT</span>
+      </div>
+    </div>
+
+    <main class="desktop-frame" data-node-id="5:275" data-name="Desktop - 1">
+      <section class="hero" data-name="HERO">
+        <img class="hero-background" src="./assets/figma-images/Desktop%20-%201/HERO_background.png" alt="" />
+        <h1>HELLO</h1>
+        <h2>welcome to my website!</h2>
+        <p class="hero-intro">You can just call me <span>Blair</span>.</p>
+        <div class="hero-guide" data-name="HERO_guide">
+          <span>Swipe to explore.</span>
+          <img src="./assets/figma-images/Desktop%20-%201/HERO_guide_icon.png" alt="" />
+        </div>
+      </section>
+
+      <section class="about" data-name="ABOUT">
+        <div class="about-background"></div>
+        <div class="section-heading about-heading"><span></span><h2>ABOUT</h2></div>
+        <img class="about-image" src="./assets/figma-images/Desktop%20-%201/ABOUT_image.png" alt="" />
+        <div class="about-text" data-name="ABOUT_text">
+          <h3>Hey, I’m 张裕.</h3>
+          <img src="./assets/figma-images/Desktop%20-%201/Waving%20Hand.png" alt="" />
+          <div class="about-body">
+            <p>I’m a product designer with a background in industrial design , exploring UI/UX and digital experiences.</p>
+            <p>I like making things, breaking things, and figuring out why things work the way they do. I’m especially interested in the little details that make an experience feel intuitive — or unexpectedly fun.</p>
+            <p>Still learning, still experimenting, and always looking for something new to explore.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="works" data-name="WORKS">
+        <div class="section-heading works-heading"><span></span><h2>WORKS</h2></div>
+
+        <div class="industrial" data-name="Industrial Design">
+          <h3>Industrial Design</h3>
+          <div class="project-list">
+            <div class="project-card" data-name="Industrial Design_project1">
+              <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_project1_background.png" alt="" />
+              <p class="project-title">CARE LINK</p>
+              <p class="project-subtitle">长者体检辅助设备</p>
+              <a class="project-link" href="https://b23.tv/ux0NDbz" target="_blank" rel="noopener noreferrer" data-name="Click here to watch C4D animation1 →">Click here to watch C4D animation →</a>
+            </div>
+            <div class="project-card" data-name="Industrial Design_project2">
+              <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_project2_background.png" alt="" />
+              <p class="project-title">CABAIR</p>
+              <p class="project-subtitle">厨房柜内净化器</p>
+              <a class="project-link" href="https://b23.tv/BxB9XYr" target="_blank" rel="noopener noreferrer" data-name="Click here to watch C4D animation2 →">Click here to watch C4D animation →</a>
+            </div>
+            <div class="project-card" data-name="Industrial Design_project3">
+              <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_project3_background.png" alt="" />
+              <p class="project-title">BILANCE</p>
+              <p class="project-subtitle">双头电动清洁刷</p>
+            </div>
+            <div class="project-card" data-name="Industrial Design_project4">
+              <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_project4_background.png" alt="" />
+              <p class="project-title">VIVERE</p>
+              <p class="project-subtitle">爬宠出行辅助产品</p>
+            </div>
+            <div class="project-card project-dark" data-name="Industrial Design_project5">
+              <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_project5_background.png" alt="" />
+              <p class="project-title">OTHERS</p>
+              <p class="project-subtitle">习作</p>
+            </div>
+          </div>
+          <a class="portfolio-button" data-name="Industrial Design_BUTTON" href="./desktop-2.html">
+            <span>View My Full Portfolio</span>
+            <img src="./assets/figma-images/Desktop%20-%201/Industrial%20Design_BUTTON_icon.png" alt="" />
+          </a>
         </div>
 
-    </section>
+        <h3 class="photo-title">Drawing &amp; Photography</h3>
+        <div class="drawing-row" data-name="Drawing & Photography_images">
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography1.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography2.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography3.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography4.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography5.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography6.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography7.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography8.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography9.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography10.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography11.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography12.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography13.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Drawing%20%26%20Photography14.png" alt="" />
+        </div>
 
+        <h3 class="likes-title">Things I Like</h3>
+        <div class="likes-row" data-name="Things I Like_images">
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images1.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images2.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images3.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images3-1.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images4.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images5.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images6.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images7.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images8.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images9.png" alt="" />
+          <img src="./assets/figma-images/Desktop%20-%201/Things%20I%20Like_images10.png" alt="" />
+        </div>
+      </section>
 
-</body>
+      <section class="contact" data-name="CONTACT">
+        <div class="contact-background"></div>
+        <p class="thanks">Thanks</p>
+        <div class="contact-tab" data-name="tab">
+          <img src="./assets/figma-images/Desktop%20-%201/tab_avator.png" alt="" />
+          <p>张裕&nbsp; Blair<br />Industrial Designer ·&nbsp; Product Designer</p>
+        </div>
+        <div class="contact-details" data-name="contact details">
+          <div class="contact-dot"></div>
+          <h2>contact me</h2>
+          <p class="contact-line email">邮箱      zy641857@163.com</p>
+          <p class="contact-line wechat">微信      ZY_InitComplete</p>
+          <p class="contact-line qq">QQ       guess</p>
+          <p class="contact-line instagram">Instagram      guess</p>
+          <p class="contact-line github">GitHub      guess</p>
+          <p class="contact-line youtube">youtube      guess</p>
+        </div>
+      </section>
+
+      <footer class="other-info" data-name="other info">
+        <p>© 2026 Blair Zhang. All rights reserved.</p>
+        <p>Designed &amp; built by 张裕.</p>
+      </footer>
+    </main>
+    <script src="./interactions.js"></script>
+  </body>
 </html>
