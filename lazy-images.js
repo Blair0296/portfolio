@@ -17,6 +17,7 @@
     return;
   }
 
+  const rootMargin = document.querySelector(".desktop-2-frame") ? "240px 0px" : "900px 0px";
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -26,7 +27,7 @@
         loadImage(entry.target);
       });
     },
-    { rootMargin: "900px 0px" },
+    { rootMargin },
   );
 
   lazyImages.forEach((image) => observer.observe(image));
