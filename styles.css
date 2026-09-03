@@ -197,6 +197,40 @@ body {
   object-fit: cover;
 }
 
+.hero h1,
+.hero h2,
+.hero-intro,
+.hero-guide {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: hero-content-in 900ms ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.hero h1 {
+  animation-delay: 200ms;
+  animation-duration: 1100ms;
+}
+
+.hero h2 {
+  animation-delay: 700ms;
+}
+
+.hero-intro {
+  animation-delay: 1200ms;
+}
+
+.hero-guide {
+  animation-delay: 1700ms;
+}
+
+@keyframes hero-content-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about {
   position: absolute;
   left: 0;
@@ -293,6 +327,48 @@ body {
 
 .about-body p {
   margin: 0;
+}
+
+.about.is-reveal-ready .about-heading,
+.about.is-reveal-ready .about-image,
+.about.is-reveal-ready .about-text h3,
+.about.is-reveal-ready .about-text > img,
+.about.is-reveal-ready .about-body {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.about.is-visible .about-heading,
+.about.is-visible .about-image,
+.about.is-visible .about-text h3,
+.about.is-visible .about-text > img,
+.about.is-visible .about-body {
+  animation: about-content-in 720ms ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.about.is-visible .about-heading {
+  animation-delay: 120ms;
+}
+
+.about.is-visible .about-image {
+  animation-delay: 320ms;
+}
+
+.about.is-visible .about-text h3,
+.about.is-visible .about-text > img {
+  animation-delay: 520ms;
+}
+
+.about.is-visible .about-body {
+  animation-delay: 720ms;
+}
+
+@keyframes about-content-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .works {
@@ -475,6 +551,25 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .hero h2,
+  .hero-intro,
+  .hero-guide {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .about.is-reveal-ready .about-heading,
+  .about.is-reveal-ready .about-image,
+  .about.is-reveal-ready .about-text h3,
+  .about.is-reveal-ready .about-text > img,
+  .about.is-reveal-ready .about-body {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
   .portfolio-button,
   .portfolio-button::before,
   .portfolio-button img {

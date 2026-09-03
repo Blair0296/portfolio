@@ -176,3 +176,29 @@ function setupWhenNearViewport(row, speed) {
 
 setupWhenNearViewport(document.querySelector(".drawing-row"), 24);
 setupWhenNearViewport(document.querySelector(".likes-row"), 18);
+
+function setupRevealOnEnter(section) {
+  if (!section) return;
+
+  const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  section.classList.add("is-reveal-ready");
+
+  if (reduceMotionQuery.matches || !("IntersectionObserver" in window)) {
+    section.classList.add("is-visible");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+
+      section.classList.add("is-visible");
+      observer.disconnect();
+    },
+    { threshold: 0.28 },
+  );
+
+  observer.observe(section);
+}
+
+setupRevealOnEnter(document.querySelector(".about"));
